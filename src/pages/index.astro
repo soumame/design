@@ -1,0 +1,25 @@
+---
+const pages = await Astro.glob("../pages/*/index.astro");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-gray-200 flex justify-center items-center">
+    <div class="bg-gray-100 rounded-xl">
+      {
+        pages.map((page: any) => (
+          <div class="p-4 relative">
+            <h2 class="text-gary-800 text-xl font-bold">{page.title}</h2>
+            <a href={page.url} class="absolute top-0 left-0 w-full h-full" />
+          </div>
+        ))
+      }
+    </div>
+  </body>
+</html>

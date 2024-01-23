@@ -1,0 +1,12 @@
+---
+import Head from "./Head.astro";
+import Topmenu from "./Topmenu";
+---
+
+<head>
+  <Head />
+</head>
+<body>
+  <Topmenu client:load />
+  <slot />
+</body>
