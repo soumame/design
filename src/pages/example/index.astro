@@ -1,7 +1,22 @@
 ---
 export const title = "Example";
 export const url = Astro.url;
+export const description = "This is an template page.";
 import Layout from "../../components/Layout.astro";
 ---
 
-<Layout>aaa</Layout>
+<Layout>
+  <!--layout内に記述してください -->
+  <div
+    class="flex flex-col justify-center items-center bg-gray-300 h-screen w-screen"
+  >
+    <h1
+      class="text-3xl font-bold bg-gradient-to-r from-sky-800 to-indigo-800 inline-block text-transparent bg-clip-text"
+    >
+      Hello world!
+    </h1>
+    <h1>The current URL is: {Astro.url}</h1>
+    <h1>The current URL pathname is: {Astro.url.pathname}</h1>
+    <h1>The current URL origin is: {Astro.url.origin}</h1>
+  </div>
+</Layout>
