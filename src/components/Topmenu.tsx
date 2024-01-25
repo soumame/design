@@ -39,7 +39,7 @@ const Githubpage = extractSegmentFromUrl(currentURL, 0);
 
 export default function Topmenu() {
   return (
-    <div className=" from-sky-500 via-sky-700 to-indigo-600 pb-0.5 bg-gradient-to-l">
+    <div className=" from-sky-500 via-sky-700 to-indigo-600 pb-0.5 bg-gradient-to-l z-50">
       <div className="from-black to-zinc-700 bg-gradient-to-tr w-full h-full py-3 px-2 flex justify-between text-gray-300 font-mono">
         <div className=" border-gray-500 flex justify-center items-center relative text-gray-300 hover:text-gray-200 transition-all hover:translate-x-1">
           <ChevronLeft className="w-5 h-5" />
@@ -74,7 +74,7 @@ export default function Topmenu() {
                   />
                   Share
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="absolute top-10 left-0 w-full bg-zinc-800 rounded-lg shadow">
+                <NavigationMenu.Content className="absolute top-10 left-0 w-full bg-zinc-800 rounded-lg shadow z-50">
                   <ul className="p-2">
                     <li className="flex items-center hover:bg-gray-600 p-3 rounded-lg relative border-2 border-zinc-800 hover:border-sky-500 transition-all">
                       <span className="flex">

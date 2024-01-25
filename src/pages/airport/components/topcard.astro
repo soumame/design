@@ -1,32 +1,16 @@
 ---
-import { CloudSun, PlaneTakeoff, AlertCircle, MoveRight } from "lucide-astro";
+import MainAction from "./MainAction.astro";
+import Title from "./Title.astro";
+import Notice from "./notice.astro";
 ---
 
 <div
-  class="w-full h-[70%] col-span-3 rounded-3xl p-4 flex flex-col justify-center items-center my-auto bg-gray-100/70 backdrop-blur"
+  class="w-full col-span-12 rounded-3xl p-4 flex flex-col justify-between items-center my-auto gap-y-6 bg-gray-100/70 backdrop-blur"
 >
-  <div class="w-full h-full">
-    <p class="text-xl">Welcome to</p>
-    <h1 class="text-6xl font-bold">Maneda Airport</h1>
-
-    <!--weather forecast? -->
-    <span class="flex font-italic">
-      <CloudSun />
-      <p class="text-base">Today's weather is clear</p>
-    </span>
-  </div>
   <div
-    class="bg-red-200/80 rounded-3xl border border-red-500 w-full p-4 text-red-700"
+    class="flex flex-wrap md:flex-nowrap justify-between items-center gap-y-6"
   >
-    <div class="flex">
-      <AlertCircle class="" /><h4 class="text-xl ml-1.5 font-bold">
-        Important notice
-      </h4>
-    </div>
-
-    <p>
-      Due to the spread of the new coronavirus, the airport is currently closed.
-    </p>
-    <a href="" class="flex mt-2 font-bold text-sm">Read more <MoveRight /></a>
+    <Title /><Notice />
   </div>
+  <MainAction />
 </div>
