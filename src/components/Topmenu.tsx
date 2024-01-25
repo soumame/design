@@ -4,6 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 import {
   ChevronLeft,
+  ChevronDown,
   Share,
   Github,
   Twitter,
@@ -26,7 +27,7 @@ export const urlCopyHandler = async (url: string) => {
   }
 };
 
-const extractSegmentFromUrl = (urlString: string, segmentIndex: any) => {
+const extractSegmentFromUrl = (urlString: string, segmentIndex: number) => {
   const parsedUrl = new URL(urlString);
   const pathname = parsedUrl.pathname; // URLのパス部分を取得
   const parts = pathname.split("/").filter((part) => part); // パスを "/" で分割し、空のセグメントを除去
@@ -39,8 +40,8 @@ const Githubpage = extractSegmentFromUrl(currentURL, 0);
 export default function Topmenu() {
   return (
     <div className=" from-sky-500 via-sky-700 to-indigo-600 pb-0.5 bg-gradient-to-l">
-      <div className="from-black to-zinc-700 bg-gradient-to-tr w-full py-3 px-2 flex justify-between text-gray-300 font-mono">
-        <div className=" border-gray-500 flex relative text-gray-300 hover:text-gray-200 transition-all hover:translate-x-1">
+      <div className="from-black to-zinc-700 bg-gradient-to-tr w-full h-full py-3 px-2 flex justify-between text-gray-300 font-mono">
+        <div className=" border-gray-500 flex justify-center items-center relative text-gray-300 hover:text-gray-200 transition-all hover:translate-x-1">
           <ChevronLeft className="w-5 h-5" />
           <span className="text-base font-bold">
             <p className="text-xs font-light">So Tokumaru's Design</p>
@@ -48,12 +49,17 @@ export default function Topmenu() {
           </span>
           <a href="/" className="absolute w-full h-full top-0 left-0" />
         </div>
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-xs font-light italic text-indigo-300 md:block hidden">
+            /{Githubpage}
+          </p>
+        </div>
         <div className=" border-gray-500 flex relative">
           <NavigationMenu.Root>
             <NavigationMenu.List className=" p-1 rounded-lg flex gap-1">
               <NavigationMenu.Item>
                 <NavigationMenu.Link
-                  className="text-gray-300 hover:text-gray-200 hover:bg-zinc-600 focus:bg-zinc-900 select-none rounded-lg px-3 py-2 text-base font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px] transition-all flex justify-center items-center"
+                  className="text-gray-300 hover:text-gray-200 hover:bg-zinc-600 focus:bg-zinc-900 select-none rounded-lg md:px-3 md:py-2 p-1.5 text-sm md:text-base font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px] transition-all flex justify-center items-center"
                   href={`https://github.com/soumame/design/tree/main/src/pages/${Githubpage}`}
                 >
                   <Github className="w-4 h-4 mr-1.5 flex justify-center" />
@@ -61,7 +67,7 @@ export default function Topmenu() {
                 </NavigationMenu.Link>
               </NavigationMenu.Item>
               <NavigationMenu.Item>
-                <NavigationMenu.Trigger className="text-gray-300 hover:text-gray-200 hover:bg-zinc-600 focus:bg-zinc-900 select-none rounded-lg px-3 py-2 text-base font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px] transition-all flex justify-center items-center">
+                <NavigationMenu.Trigger className="text-gray-300 hover:text-gray-200 hover:bg-zinc-600 focus:bg-zinc-900 select-none rounded-lg md:px-3 md:py-2 p-1.5 text-sm md:text-base font-medium leading-none no-underline outline-none focus:shadow-[0_0_0_2px] transition-all flex justify-center items-center">
                   <Share
                     className="w-4 h-4 mr-1.5 flex justify-center"
                     aria-hidden

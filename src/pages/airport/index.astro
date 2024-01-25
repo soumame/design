@@ -1,0 +1,29 @@
+---
+export const description = "International Airport's website design";
+import Layout from "../../components/Layout.astro";
+
+import { Image } from "astro:assets";
+import airportThumbnail from "./images/airport.jpg";
+import TopCard from "./components/topcard.astro";
+import MainAction from "./components/mainaction.astro";
+---
+
+<Layout>
+  <!--layout内に記述してください -->
+  <div class="w-screen h-screen">
+    <Image
+      src={airportThumbnail}
+      alt="airport"
+      class="absolute top-0 bottom-0 -z-20 saturate-200 bg-gray-200/50 h-full w-full overflow-clip"
+    />
+    <span
+      class="absolute top-0 bottom-0 -z-10 h-full w-full overflow-clip bg-gradient-to-b from-transparent via-gray-500/20 to-gray-700/70"
+    ></span>
+    <!--１２カラムグリッド -->
+    <div class="max-w-4xl grid grid-cols-6 gap-10 mx-auto w-full h-full">
+      <TopCard />
+      <MainAction />
+    </div>
+    flightinfo(departure, arrival), floorguide, publictransport, shop&dine,
+  </div>
+</Layout>
