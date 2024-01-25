@@ -17,9 +17,17 @@ const pages = await Astro.glob("../pages/*/index.astro");
       <div
         class="md:w-[50%] w-full h-full justify-center items-center p-4 gap-2"
       >
-        <img src="mame.svg" class="h-12 w-12 rounded-full overflow-hidden" />
-        <p class="text-base text-white font-thin font-mono">So Tokumaru's</p>
+        <span class="flex mustify-center items-center my-2">
+          <img src="mame.svg" class="h-12 w-12 rounded-full overflow-hidden" />
+          <p class="text-base text-white font-thin font-mono ml-4">
+            So Tokumaru's
+          </p>
+        </span>
         <h1 class="text-6xl text-white font-thin font-mono">Web Design Note</h1>
+        <p class="text-white font-mono font-thin my-2">
+          Playground of front-end. Built by Astro. May not display correctly on
+          mobile
+        </p>
         <button
           class="text-gray-200 text-sm p-2 rounded-lg font-mono font-bold relative bg-transparent hover:bg-gray-500/50 border border-gray-100/30 hover:border-green-400 hover:shadow shadow-sky-200"
         >
