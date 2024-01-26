@@ -1,0 +1,16 @@
+---
+import MainAction from "./MainAction.astro";
+import Title from "./Title.astro";
+import Notice from "./notice.astro";
+---
+
+<div
+  class="w-full col-span-12 rounded-3xl p-4 flex flex-col justify-between items-center my-auto gap-y-6 bg-gray-100/70 backdrop-blur"
+>
+  <div
+    class="flex flex-wrap md:flex-nowrap justify-between items-center gap-y-6"
+  >
+    <Title /><Notice />
+  </div>
+  <MainAction />
+</div>

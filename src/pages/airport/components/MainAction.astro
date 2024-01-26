@@ -1,0 +1,37 @@
+---
+import { PlaneTakeoff, Map, TrainFront, ShoppingBag } from "lucide-astro";
+import MainActionCard from "./MainActionCard.astro";
+---
+
+<div
+  class="col-span-3 grid grid-rows-2 lg:grid-rows-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full"
+>
+  <MainActionCard
+    title="Flight Information"
+    description="When is your flight?"
+    link="/projects/new"
+  >
+    <PlaneTakeoff class="p-4 w-24 h-24 text-white" />
+  </MainActionCard>
+  <MainActionCard
+    title="Floor Map"
+    description="Where is your gate?"
+    link="/projects/new"
+  >
+    <Map class="p-4 w-24 h-24 text-white" />
+  </MainActionCard>
+  <MainActionCard
+    title="Parking & Transport"
+    description="How to get to the airport?"
+    link="/projects/new"
+  >
+    <TrainFront class="p-4 w-24 h-24 text-white" />
+  </MainActionCard>
+  <MainActionCard
+    title="Shop & Dine"
+    description="what to do at the airport?"
+    link="/projects/new"
+  >
+    <ShoppingBag class="p-4 w-24 h-24 text-white" />
+  </MainActionCard>
+</div>
